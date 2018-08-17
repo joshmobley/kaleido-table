@@ -14,6 +14,8 @@ This project ships w/ docker configuration. If you're running docker locally, fo
 
 If you don't have Docker, no problem. You'll just need to follow these steps:
 
+_Note: You can replace the below yarn commands with npm if you like_
+
 1. Clone this repo
 2. Navigate ot the root of the project
 3. Run `yarn` -- if you don't have yarn, [follow these docs](https://yarnpkg.com/en/docs/install)
