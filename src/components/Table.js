@@ -26,7 +26,7 @@ class Table extends React.Component {
       <div className="table">
         <h2 className="table__title">My Nodes</h2>
         { this.props.data.map( obj =>
-          <div key={ obj.id } onClick={ (e) => this.handleClick(e, obj.id) } className={ this.state.openId == obj.id ? "table__group--active" : "table__group" }>
+          <div key={ obj.id } onClick={ (e) => this.handleClick(e, obj.id) } className={ this.state.openId === obj.id ? "table__group--active" : "table__group" }>
             <TableRow data={ obj } />
             <TableShelf data={ obj } />
           </div>

@@ -13,10 +13,8 @@ class TableRow extends React.Component {
       vpcPrivate
     } = this.props.data;
 
-    const isOpen = this.props.isOpen;
-
     return (
-      <div className={ isOpen == id ? "table__row--active" : "table__row"}>
+      <div className="table__row">
         <div className="table__header">
           <i className={
             "mr-2 " +

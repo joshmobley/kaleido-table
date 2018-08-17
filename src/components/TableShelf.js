@@ -5,14 +5,11 @@ class TableShelf extends React.Component {
   render() {
 
     const {
-      id,
       sections
     } = this.props.data;
 
-    const isOpen = this.props.isOpen;
-
     return (
-      <div className={ isOpen == id ? "table__shelf--active" : "table__shelf" }>
+      <div className="table__shelf">
       { sections.map( section =>
           <div key={section.name}>
             <h4 className="table__sub-header">{section.name}</h4>
