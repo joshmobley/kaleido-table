@@ -32,7 +32,7 @@ Below is the structure expected for the `<Table />` component. Stylistically, th
 
 You can see an example data set in `src/data.json`.
 
-```json
+```
 [{
   "id": "zzzabc123",                // string
   "header": "BaconHatsForever",     // string
