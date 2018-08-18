@@ -1,38 +1,5 @@
 .table {
 
-  &__title {
-    color: $grey-dark;
-    font-size: .8rem;
-    font-weight: 300;
-    margin-bottom: .5rem;
-    text-transform: uppercase;
-  }
-
-  &__row {
-    align-items: center;
-    background: $white;
-    border-bottom: 0;
-    display: flex;
-    flex-direction: column;
-    padding: 1rem 1.5rem;
-
-    &--active {
-      @extend .table__row;
-      margin: 1rem 0 0;
-    }
-  }
-
-  &__shelf {
-    background: $grey-lighter;
-    max-height: 0;
-    overflow: hidden;
-    padding: 0 1.5rem;
-    transition-timing-function: linear;
-    transition-duration: .3s;
-    transition-delay: 0;
-    transition-property: max-height, padding;
-  }
-
   &__group {
     border: 1px solid $grey;
 
@@ -56,12 +23,61 @@
         border-top: 1px solid $grey;
       }
 
+      .table__info {
+        display: block;
+      }
+
       .table__shelf {
         @extend .table__shelf;
         border-top: 1px solid $grey;
         max-height: 500px;
         padding: 1rem 1.5rem;
       }
+    }
+  }
+
+  &__header, &__info {
+    flex: 1;
+    padding-right: 1rem;
+  }
+
+  &__header {
+    align-items: center;
+    color: $blue-darker;
+    display: flex;
+    font-weight: 700;
+  }
+
+  &__info {
+    display: none;
+    font-size: .9rem;
+    margin: .25rem 0;
+  }
+
+  &__linkable {
+
+    a, button {
+      display: none;
+    }
+
+    &:hover {
+      a, button {
+        display: inline;
+      }
+    }
+  }
+
+  &__row {
+    align-items: center;
+    background: $white;
+    border-bottom: 0;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 1.5rem;
+
+    &--active {
+      @extend .table__row;
+      margin: 1rem 0 0;
     }
   }
 
@@ -80,21 +96,15 @@
     }
   }
 
-  &__header, &__info {
-    flex: 1;
-    padding-right: 1rem;
-  }
-
-  &__header {
-    align-items: center;
-    color: $blue-darker;
-    display: flex;
-    font-weight: 700;
-  }
-
-  &__info {
-    font-size: .9rem;
-    margin: .25rem 0;
+  &__shelf {
+    background: $grey-lighter;
+    max-height: 0;
+    overflow: hidden;
+    padding: 0 1.5rem;
+    transition-timing-function: linear;
+    transition-duration: .3s;
+    transition-delay: 0;
+    transition-property: max-height, padding;
   }
 
   &__sub-header {
@@ -105,19 +115,29 @@
     padding-bottom: 1rem;
     text-transform: uppercase;
   }
+
+  &__title {
+    color: $grey-dark;
+    font-size: .8rem;
+    font-weight: 300;
+    margin-bottom: .5rem;
+    text-transform: uppercase;
+  }
+
 }
 
 @media screen and (min-width: 768px) {
   .table {
-    &__row {
-      flex-direction: row;
-    }
 
     &__group--active {
       .table__shelf {
         max-height: 300px;
         padding: 2rem 1.5rem;
       }
+    }
+
+    &__row {
+      flex-direction: row;
     }
 
     &__section {

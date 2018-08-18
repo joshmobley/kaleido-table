@@ -5,3 +5,17 @@ body {
 .bold {
   font-weight: 700;
 }
+
+.text-small {
+  font-size: .8rem;
+}
+
+a {
+  color: $blue-darker;
+  text-decoration: none;
+  transition: color .3s;
+
+  &:hover {
+    color: $blue-light;
+  }
+}
