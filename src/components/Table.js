@@ -4,8 +4,8 @@ import TableShelf from './TableShelf';
 
 class Table extends React.Component {
 
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
 
     this.state = {
       openId: '' // ID of network that is currently toggled open
