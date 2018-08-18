@@ -8,16 +8,14 @@ class Table extends React.Component {
     super();
 
     this.state = {
-      openId: '123abczzz'
+      openId: '' // ID of network that is currently toggled open
     };
 
-    this.handleClick = this.handleClick.bind(this);
+    this.toggleShelf = this.openShelf.bind(this);
   }
 
-  handleClick(e, id) {
-    this.setState( state => ({
-      openId: id
-    }))
+  openShelf(e, id) {
+    this.setState({ openId: id });
   }
 
   render () {
@@ -28,7 +26,7 @@ class Table extends React.Component {
         { this.props.data.map( obj =>
           <div
             key={ obj.id }
-            onClick={ (e) => this.handleClick(e, obj.id) }
+            onClick={ (e) => this.openShelf(e, obj.id) }
             className={ this.state.openId === obj.id ? "table__group--active" : "table__group" }
             >
             <TableRow data={ obj } />
