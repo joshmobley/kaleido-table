@@ -72,7 +72,8 @@ Some pieces of styling were determined to be highly specific to this instance of
 These components do come with tests. To run the suite:
 
 1. `yarn test`
-2. use `q` to quit watching for changes
+2. use `a` to run all tests
+3. use `q` to quit watching for changes
 
 ### Docker Users
 
@@ -80,8 +81,9 @@ If using docker, from the command line run:
 
 1. `docker-compose exec app /bin/bash` to enter the container shell
 2. `yarn test`
-3. use `q` to quit watching for changes
-3. use `exit` to leave the container shell
+3. use `a` to run all tests
+4. use `q` to quit watching for changes
+5. use `exit` to leave the container shell
 
 
 
