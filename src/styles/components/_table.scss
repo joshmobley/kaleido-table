@@ -28,7 +28,6 @@
       }
 
       .table__shelf {
-        @extend .table__shelf;
         border-top: 1px solid $grey;
         max-height: 500px;
         padding: 1rem 1.5rem;
@@ -55,13 +54,15 @@
   }
 
   &__linkable {
+    position: relative;
 
-    a, button {
+    a {
       display: none;
+      position: absolute;
     }
 
     &:hover {
-      a, button {
+      a {
         display: inline;
       }
     }
@@ -71,6 +72,7 @@
     align-items: center;
     background: $white;
     border-bottom: 0;
+    cursor: pointer;
     display: flex;
     flex-direction: column;
     padding: 1rem 1.5rem;
