@@ -1,0 +1,13 @@
+{
+  "name": "kaleido-table-server",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "express": "^4.16.3",
+    "mongodb": "^3.1.3",
+    "socket.io": "^2.1.1"
+  },
+  "scripts": {
+    "start": "node server.js"
+  }
+}

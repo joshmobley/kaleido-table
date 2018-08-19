@@ -1,0 +1,12 @@
+.status-light {
+  background: $grey;
+  border-radius: 9999em;
+  height: 10px;
+  text-indent: -9999em;
+  width: 10px;
+
+  &--active {
+    @extend .status-light;
+    background: $green;
+  }
+}

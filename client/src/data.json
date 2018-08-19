@@ -1,0 +1,177 @@
+[{
+  "id": "zzzabc123",
+  "header": "BaconHatsForever",
+  "netStatus": true,
+  "logStatus": true,
+  "vpcPublic": true,
+  "vpcPrivate": true,
+  "sections": [{
+    "name": "Node Information",
+    "data": [{
+        "label": "releaseVersion",
+        "value": "1.2.3"
+      },{
+        "label": "nodeIdentity",
+        "value": "Lorem Ipsum"
+      },{
+        "label": "userAccounts",
+        "value": "Lorem Ipsum"
+      },{
+        "label": "consensusIdentity",
+        "value": "Lorem Ipsum"
+    }]
+  },{
+    "name": "Endpoints",
+    "data": [{
+        "label": "rpcEndpoint",
+        "value": "Lorem Ipsum"
+      },{
+        "label": "wssEndpoint",
+        "value": "Lorem Ipsum"
+      },{
+        "label": "webhookURL",
+        "value": "//lorem.ipsum"
+      },{
+        "label": "kafkaBrokers",
+        "value": "Lorem Ipsum"
+      },{
+        "label": "kafkaReplyTopic",
+        "value": "Lorem Ipsum"
+      },{
+        "label": "kafkaRequestTopic",
+        "value": "Lorem Ipsum"
+      }]
+  }]
+},{
+  "id": "123abczzz",
+  "header": "ForeverBaconHats",
+  "netStatus": false,
+  "logStatus": true,
+  "vpcPublic": true,
+  "vpcPrivate": false,
+  "sections": [{
+    "name": "Node Information",
+    "data": [{
+        "label": "releaseVersion",
+        "value": "1.2.3"
+      },{
+        "label": "nodeIdentity",
+        "value": "Lorem Ipsum"
+      },{
+        "label": "userAccounts",
+        "value": "Lorem Ipsum"
+      },{
+        "label": "consensusIdentity",
+        "value": "Lorem Ipsum"
+    }]
+  },{
+    "name": "Endpoints",
+    "data": [{
+        "label": "rpcEndpoint",
+        "value": "Lorem Ipsum"
+      },{
+        "label": "wssEndpoint",
+        "value": "Lorem Ipsum"
+      },{
+        "label": "webhookURL",
+        "value": "//lorem.ipsum"
+      },{
+        "label": "kafkaBrokers",
+        "value": "Lorem Ipsum"
+      },{
+        "label": "kafkaReplyTopic",
+        "value": "Lorem Ipsum"
+      },{
+        "label": "kafkaRequestTopic",
+        "value": "Lorem Ipsum"
+      }]
+  }]
+},{
+  "id": "abc123zzz",
+  "header": "HatsForeverBacon",
+  "netStatus": false,
+  "logStatus": true,
+  "vpcPublic": false,
+  "vpcPrivate": true,
+  "sections": [{
+    "name": "Node Information",
+    "data": [{
+        "label": "releaseVersion",
+        "value": "1.2.3"
+      },{
+        "label": "nodeIdentity",
+        "value": "Lorem Ipsum"
+      },{
+        "label": "userAccounts",
+        "value": "Lorem Ipsum"
+      },{
+        "label": "consensusIdentity",
+        "value": "Lorem Ipsum"
+    }]
+  },{
+    "name": "Endpoints",
+    "data": [{
+        "label": "rpcEndpoint",
+        "value": "Lorem Ipsum"
+      },{
+        "label": "wssEndpoint",
+        "value": "Lorem Ipsum"
+      },{
+        "label": "webhookURL",
+        "value": "//lorem.ipsum"
+      },{
+        "label": "kafkaBrokers",
+        "value": "Lorem Ipsum"
+      },{
+        "label": "kafkaReplyTopic",
+        "value": "Lorem Ipsum"
+      },{
+        "label": "kafkaRequestTopic",
+        "value": "Lorem Ipsum"
+      }]
+  }]
+},{
+  "id": "abczzz123",
+  "header": "HatsBaconForever",
+  "netStatus": true,
+  "logStatus": false,
+  "vpcPublic": false,
+  "vpcPrivate": false,
+  "sections": [{
+    "name": "Node Information",
+    "data": [{
+        "label": "releaseVersion",
+        "value": "1.2.3"
+      },{
+        "label": "nodeIdentity",
+        "value": "Lorem Ipsum"
+      },{
+        "label": "userAccounts",
+        "value": "Lorem Ipsum"
+      },{
+        "label": "consensusIdentity",
+        "value": "Lorem Ipsum"
+    }]
+  },{
+    "name": "Endpoints",
+    "data": [{
+        "label": "rpcEndpoint",
+        "value": "Lorem Ipsum"
+      },{
+        "label": "wssEndpoint",
+        "value": "Lorem Ipsum"
+      },{
+        "label": "webhookURL",
+        "value": "//lorem.ipsum"
+      },{
+        "label": "kafkaBrokers",
+        "value": "Lorem Ipsum"
+      },{
+        "label": "kafkaReplyTopic",
+        "value": "Lorem Ipsum"
+      },{
+        "label": "kafkaRequestTopic",
+        "value": "Lorem Ipsum"
+      }]
+  }]
+}]
