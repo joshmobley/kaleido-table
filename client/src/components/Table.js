@@ -30,7 +30,7 @@ class Table extends React.Component {
             className={ this.state.openId === obj.id ? "table__group--active" : "table__group" }
             >
             <TableRow data={ obj } />
-            <TableShelf data={ obj } />
+            <TableShelf data={ obj.sections } />
           </div>
         )}
       </div>
