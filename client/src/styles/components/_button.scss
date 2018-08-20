@@ -1,0 +1,18 @@
+.button {
+  cursor: pointer;
+  font-size: .8rem;
+
+  &--basic {
+    @extend .button;
+    background: none;
+    border: none;
+    color: $blue-darker;
+    display: inline;
+    padding: 0;
+    -webkit-appearance: none;
+
+    &:hover {
+      color: $blue-light;
+    }
+  }
+}
