@@ -6,13 +6,12 @@ This project requires docker. If you have docker installed, follow these steps:
 
 1. Clone this repo
 2. Navigate to the root of the project
-3. Ensure that port 3000, 4000, and 5000 is available
+3. Ensure that port 3000, 4000, and 5000 are available
 4. Run `docker-compose up -d mongodb-primary mongodb-secondary mongodb-arbiter` from the terminal
 5. Once our mongo instances have had time to spin themselves up, run `docker-compose up -d client controller server`.
 6. Once everything is running, navigate to the following ports: 
   - `http://localhost:3000` for the table app
   - `http://localhost:4000` for a separate controller to make DB manipulation easy
-  - `http://localhost:5000` is reserved for our node server, but you shouldn't need to directly interface with it
 
 ## Finding Your Way Around
 
