@@ -29,12 +29,32 @@ services:
       - ./server:/usr/src/app
       - '/usr/src/app/node_modules'
     links:
-      - db
+      - mongodb-primary
 
-  db:
-    container_name: kaleido-table-db
-    image: mongo:latest
+  mongodb-primary:
+    image: 'bitnami/mongodb:3.6'
+    environment:
+      - MONGODB_REPLICA_SET_MODE=primary
     volumes:
-      - ./data:/data/db
-    ports:
-      - '27017:27017'
+      - 'mongodb_master_data:/bitnami'
+
+  mongodb-secondary:
+    image: 'bitnami/mongodb:3.6'
+    depends_on:
+      - mongodb-primary
+    environment:
+      - MONGODB_REPLICA_SET_MODE=secondary
+      - MONGODB_PRIMARY_HOST=mongodb-primary
+
+  mongodb-arbiter:
+    image: 'bitnami/mongodb:3.6'
+    depends_on:
+      - mongodb-primary
+    environment:
+      - MONGODB_REPLICA_SET_MODE=arbiter
+      - MONGODB_PRIMARY_HOST=mongodb-primary
+
+volumes:
+  mongodb_master_data:
+    driver: local
+
