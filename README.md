@@ -2,25 +2,29 @@
 
 ### With Docker
 
-This project ships w/ docker configuration. If you're running docker locally, follow these steps:
+This project requires docker. If you have docker installed, follow these steps:
 
 1. Clone this repo
 2. Navigate to the root of the project
-3. Ensure that port 3000 is available
-4. Run `docker-compose up -d` from the terminal
-5. Navigate in your browser to `http://localhost:3000`
+3. Ensure that port 3000, 4000, and 5000 is available
+4. Run `docker-compose up -d mongodb-primary mongodb-secondary mongodb-arbiter` from the terminal
+5. Once our mongo instances have had time to spin themselves up, run `docker-compose up -d client controller server`.
+6. Once everything is running, navigate to the following ports: 
+  - `http://localhost:3000` for the table app
+  - `http://localhost:4000` for a separate controller to make DB manipulation easy
+  - `http://localhost:5000` is reserved for our node server, but you shouldn't need to directly interface with it
 
-### Without Docker
+## Finding Your Way Around
 
-If you don't have Docker, no problem. You'll just need to follow these steps:
+The project is split into the following folders:
 
-_Note: You can replace the below yarn commands with npm if you like_
+1. `client` - the original react app that renders our table
+2. `controller` - a separate react app that gives us an easy way to add/edit/delete from the db
+3. `server` - our node app
 
-1. Clone this repo
-2. Navigate ot the root of the project
-3. Run `yarn` -- if you don't have yarn, [follow these docs](https://yarnpkg.com/en/docs/install)
-4. Once yarn finishes installing dependencies, run `yarn run start`
-5. Webpack should open a browser for you to `http://localhost:3000` when the local server is running
+### Server
+
+Our node server is a pretty basic setup, and all node code is found in `server.js`.
 
 ## Usage
 
@@ -28,27 +32,7 @@ The `<Table />` component takes one prop `data` which expects an array of object
 
 ### Object Formatting
 
-Below is the structure expected for the `<Table />` component. Stylistically, the `<Table />` component is not dependent on any particular type of data, but this particular instance of it has been built to receive the following.
-
-You can see an example data set in `src/data.json`.
-
-```
-[{
-  "id": "zzzabc123",                // string
-  "header": "BaconHatsForever",     // string
-  "netStatus": true,                // boolean
-  "logStatus": true,                // boolean
-  "vpcPublic": true,                // boolean
-  "vpcPrivate": true,               // boolean
-  "sections": [{                    // [object]
-    "name": "Node Information",     // string
-    "data": [{                      // [object]
-      "label": "releaseVersion",    // string
-      "value": "1.2.3"              // string
-    }]
-  }]
-}]
-```
+Below is the structure expected for the `<Table />` component. Stylistically, the `<Table />` component is not dependent on any particular type of data.
 
 ### Styles
 
@@ -71,15 +55,7 @@ Some pieces of styling were determined to be highly specific to this instance of
 
 These components do come with tests. To run the suite:
 
-1. `yarn test`
-2. use `a` to run all tests
-3. use `q` to quit watching for changes
-
-### Docker Users
-
-If using docker, from the command line run:
-
-1. `docker-compose exec app /bin/bash` to enter the container shell
+1. `docker-compose exec client /bin/bash` to enter the container shell
 2. `yarn test`
 3. use `a` to run all tests
 4. use `q` to quit watching for changes

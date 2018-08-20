@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import socketIOClient from 'socket.io-client';
 import axios from 'axios';
-import data from './data.json';
 import Table from './components/Table';
 
 class App extends Component {
